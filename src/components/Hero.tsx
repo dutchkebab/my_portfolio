@@ -1,6 +1,7 @@
 import { useTypingEffect } from '@/hooks/useTypingEffect';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from './ui/button';
+import AstronautScene from './AstronautScene';
 
 const roles = [
   'Fullstack Software Engineer',
@@ -14,7 +15,13 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto">
+        {/* 3D Astronaut */}
+        <div className="mb-8">
+          <AstronautScene />
+        </div>
+
+        <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 font-mono">
             <span className="text-primary">{'>'}</span> Vedat Duha Daglar
@@ -47,8 +54,9 @@ const Hero = () => {
           </Button>
         </div>
 
-        <div className="animate-bounce mt-12">
-          <div className="text-primary text-2xl">↓</div>
+          <div className="animate-bounce mt-12">
+            <div className="text-primary text-2xl">↓</div>
+          </div>
         </div>
       </div>
     </section>
